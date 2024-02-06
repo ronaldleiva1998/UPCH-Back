@@ -59,3 +59,4 @@ C:\Users\Ronald\Desktop\Prueba-React-UPCH-Ronald\prueba back-Upch\pjPruebaUpch\o
 C:\Users\Ronald\Desktop\Prueba-React-UPCH-Ronald\prueba back-Upch\pjPruebaUpch\obj\Debug\net6.0\pjPruebaUpch.pdb
 C:\Users\Ronald\Desktop\Prueba-React-UPCH-Ronald\prueba back-Upch\pjPruebaUpch\obj\Debug\net6.0\pjPruebaUpch.genruntimeconfig.cache
 C:\Users\Ronald\Desktop\Prueba-React-UPCH-Ronald\prueba back-Upch\pjPruebaUpch\obj\Debug\net6.0\ref\pjPruebaUpch.dll
+C:\Users\Ronald\Desktop\Prueba-React-UPCH-Ronald\prueba back-Upch\pjPruebaUpch\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

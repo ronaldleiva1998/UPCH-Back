@@ -6,11 +6,12 @@ using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using pjPruebaUpch.Models;
 
 using Microsoft.AspNetCore.Cors;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace pjPruebaUpch.Controllers
 {
     [EnableCors("ReglasCors")]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class PersonaController : ControllerBase
@@ -37,7 +38,7 @@ namespace pjPruebaUpch.Controllers
             }
             catch(Exception ex)
             {
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message, response = lista });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message, response = lista });
             }
         }
 
@@ -62,7 +63,7 @@ namespace pjPruebaUpch.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message, response = oPersona });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message, response = oPersona });
             }
         }
 
@@ -76,11 +77,11 @@ namespace pjPruebaUpch.Controllers
                 _dbcontext.Personas.Add(objeto);
                 _dbcontext.SaveChanges();
 
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok"});
+                return StatusCode(StatusCodes.Status201Created, new { mensaje = "ok"});
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message });
             }
         }
 
@@ -112,7 +113,7 @@ namespace pjPruebaUpch.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message });
             }
         }
 
@@ -139,7 +140,7 @@ namespace pjPruebaUpch.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message });
             }
 
         }
